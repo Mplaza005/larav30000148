@@ -45,4 +45,13 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+      //  Relacion Uno A Uno
+      public function profile(){
+       
+       return $this->hasOne('App\Models\Profile');
+   }
+
+
+
+
 }
