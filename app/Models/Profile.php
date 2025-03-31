@@ -9,7 +9,6 @@ class Profile extends Model
 
     public function user()
     {
-     
-      return $this->belongsTo('App\Models\User');//metodo de laravel
+       return $this->belongsTo('App\Models\User');//metodo de laravel
     }
 }
