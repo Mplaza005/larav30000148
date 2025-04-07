@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\AreasController;
+use App\Http\Controllers\OrmController;
 use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +14,7 @@ Route::post('/crearProducto',[ProductController::class,'store'])->name('product.
 
 
 
-
+Route::get('ormconsultas',[OrmController::class,'consultas']);
 
 
 
