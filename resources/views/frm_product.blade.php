@@ -1,36 +1,23 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>formulario producto</title>
-</head>
-<body>
+@extends('layouts.app')
 
-    <h1>Formulario</h1>
-
-    <form action="{{route('product.store')}}" method="POST" enctype="multipart/form-data">
-
-    @csrf
-
-    <label>
-        Ingrese el nombre del producto:
-        <br>
-        <input type="text" name="name">
-    </label>
-    <br>
-    <label>
-        Ingrese el precio del producto: :
-        <br>
-        <input type="number" name="price">
-    </label>
-    <br><br>
-
-    <button type="submit">Enviar Formulario:</button>
-    </form>
+@section('content')
 
 
+<form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 
-
-</body>
-</html>
+    @endsection
