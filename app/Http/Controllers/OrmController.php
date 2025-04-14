@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\Profile;
+use App\Models\Post;
 use App\Models\Role;
 use Illuminate\Http\Request;
 
@@ -10,7 +12,20 @@ class OrmController extends Controller
 
     public function consultas(){
 
-        // $users = User::find(1);
+
+        // $profile=Profile::find(2);
+        // return $profile->user;
+
+          $user = User::find(2);
+
+          return $user->roles;
+
+        // $post=Post::find(3);
+        // return $post->category;
+
+
+
+
 
         // return $users->profile;
 
@@ -23,9 +38,9 @@ class OrmController extends Controller
 
 
 
-         $role = Role::find(3);
-         $role->users()->attach(2);
-         return $role;
+        //  $role = Role::find(3);
+        //  $role->users()->attach(2);
+        //  return $role;
 
 
 
