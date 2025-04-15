@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use App\Models\Profile;
 use App\Models\Post;
@@ -10,31 +11,22 @@ use Illuminate\Http\Request;
 class OrmController extends Controller
 {
 
-    public function consultas(){
+    public function consultas()
+    {
 
 
-        // $profile=Profile::find(2);
+        //  $user = User::find(2);
+        //  return $user->profiles;//$user->posts;$user->roles;
+
+        // $profile = Profile::find(2);
         // return $profile->user;
 
-          $user = User::find(2);
+        //  $post=Post::find(3);
+        //  return $post->category;
 
-          return $user->roles;
+        //RELACIONES ANIDADAS
 
-        // $post=Post::find(3);
-        // return $post->category;
-
-
-
-
-
-        // return $users->profile;
-
-        // $role = Role::find(1);
-
-
-        //  $user = User::find(1);
-        //  $user->roles()->detach(1);
-        //  return $user;
+        //return User::with('posts.category')->get();
 
 
 
@@ -42,10 +34,9 @@ class OrmController extends Controller
         //  $role->users()->attach(2);
         //  return $role;
 
+        //  $user->roles()->detach(1);
 
 
 
     }
-
-
 }
