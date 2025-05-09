@@ -9,28 +9,17 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/formularioProducto',[ProductController::class,'create']);
-Route::post('/crearProducto',[ProductController::class,'store'])->name('product.store');
+Route::get('categories', [CategoryController::class, 'index'])->name('category.index');
+Route::get('category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::post('category/store', [CategoryController::class, 'store'])->name('category.store');
 
 
 
-Route::get('ormconsultas',[OrmController::class,'consultas']);
+Route::get('categories/{category}', [CategoryController::class, 'show'])->name('category.show');
+Route::put('category/{category}',[CategoryController::class,'update'])->name('category.update');
+Route::delete('category/{category}',[CategoryController::class,'destroy'])->name('category.destroy');
+Route::get('curso/{category}/editar',[CategoryController::class,'edit'])->name('category.edit');
 
-
-
-
-Route::get('cursos/listar',[CourseController::class,'listar'])->name('course.listar');
-
-Route::get('/formularioCurso',[CourseController::class,'create']);
-Route::post('/crearCurso',[CourseController::class,'store'])->name('course.store');
-
-Route::get('curso/{curso}',[CourseController::class,'show'])->name('curso.show');
-
-Route::put('curso/{curso}',[CourseController::class,'update'])->name('curso.update');
-
-Route::delete('curso/{curso}',[CourseController::class,'destroy'])->name('curso.destroy');
-
-Route::get('curso/{curso}/editar',[CourseController::class,'edit'])->name('curso.edit');
 
 
 

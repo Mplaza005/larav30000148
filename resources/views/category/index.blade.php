@@ -3,14 +3,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Listar Cursos</title>
+    <title>Document</title>
 </head>
 <body>
+    <h1>Listar categorias...</h1>
 
-    <h1>Listar Cursos</h1>
-
-{{$cursos}}
-
-
+    <tbody>
+  {{$categories}}
+    </tbody>
 </body>
 </html>
